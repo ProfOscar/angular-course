@@ -6,5 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular01';
+
+  title: string = 'Angular Course: Practising Directives';
+
+  isDetailsVisible: boolean = false;
+  toggleDetailsButtonLabel: string = "Show Details";
+
+  logs:any = [];
+
+  onToggleDetailsClick() {
+    this.isDetailsVisible = !this.isDetailsVisible;
+    this.toggleDetailsButtonLabel = this.isDetailsVisible ? 'Hide Details' : 'Show Details';
+    this.logs.push(Date.now().toString());
+    console.log(this.logs);
+  }
+
 }
