@@ -1,7 +1,10 @@
 <!-- <h4 [ngStyle]="{ backgroundColor: student.gender=='F' ? 'pink' : 'cyan' }">{{ student.name }} - {{ student.hobby }}</h4> -->
-<p [ngClass]="{
-    'female': student.gender=='F',
-    'male': student.gender=='M',
-    'underlined': student.hobby=='Paddle'}">
+<p  class="cliccable" 
+    [ngClass]="{
+                    'female': student.gender=='F',
+                    'male': student.gender=='M',
+                    'underlined': student.hobby=='Paddle'
+                }"
+    (click)="onStudentClick()">
     {{ student.name }} - {{ student.hobby }}
 </p>
