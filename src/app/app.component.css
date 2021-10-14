@@ -7,8 +7,18 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, .student {
     margin: 8px 0;
+}
+
+.student {
+    min-width: 350px;
+    text-align: left;
+}
+
+.student span {
+    min-width: 40px;
+    display: inline-block;
 }
 
 p {

@@ -32,9 +32,14 @@
   </div>
 
   <h2>The Students:</h2>
-  <app-student></app-student>
-  <app-student></app-student>
-  <app-student></app-student>
+  <!-- <div *ngFor="let item of studentList">
+    {{item.name}} - {{item.hobby}}
+  </div> -->
+  <!-- <app-student *ngFor="let item of studentList" [student]="item"></app-student> -->
+  <div class="student" *ngFor="let item of studentList; let i = index">
+    <span>{{ i + 1 }} => </span>
+    <app-student [student]="item"></app-student>
+  </div>
 
   <svg id="clouds" xmlns="http://www.w3.org/2000/svg" width="2611.084" height="485.677" viewBox="0 0 2611.084 485.677">
     <title>Gray Clouds Background</title>
