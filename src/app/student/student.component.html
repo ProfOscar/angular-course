@@ -6,5 +6,12 @@
                     'underlined': student.hobby=='Paddle'
                 }"
     (click)="onStudentClick()">
-    {{ student.name }} - {{ student.hobby }}
+    {{ student.name }}
+    <!-- <span *ngIf="student.isPro">(professionista)</span>
+    <span *ngIf="!student.isPro">(dilettante)</span> -->
+    <span *ngIf="student.isPro;else noPro">(professionista)</span>
+    <ng-template #noPro>
+        <span>(dilettante)</span>
+    </ng-template>
+     - {{ student.hobby }}
 </p>
