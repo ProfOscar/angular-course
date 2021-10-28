@@ -4,3 +4,24 @@
     cursor: pointer;
     padding: 4px 10px;
 }
+
+button {
+    background-color: #1976d2;
+    padding: 10px;
+    margin: 16px auto;
+    border-radius: 4px;
+    color: whitesmoke;
+}
+
+button.delete{
+    background-color: lightcoral;
+    margin-left: 12px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    color: purple;
+}
+
+button:disabled {
+    background-color: whitesmoke;
+    color: gray;
+}

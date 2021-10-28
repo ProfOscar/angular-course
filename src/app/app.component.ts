@@ -57,4 +57,10 @@ export class AppComponent {
   onDeleteStudent(index: number) {
     this.studentList.splice(index, 1);
   }
+
+  onStudentDeleteEvent(student: any) {
+    // alert("da cancellare: " + student.name);
+    this.studentList.splice(this.studentList.indexOf(student), 1);
+  }
+
 }
