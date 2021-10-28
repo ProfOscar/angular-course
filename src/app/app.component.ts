@@ -25,7 +25,7 @@ export class AppComponent {
     { name: 'Gabriele Leone', hobby: 'Volley', gender: 'M', isPro: false },
   ]
 
-  hobbies = ['Karate', 'Paddle', 'Volley', 'Tennis', 'Soccer'];
+  hobbies = ['Karate', 'Paddle', 'Volley', 'Tennis', 'Soccer', "Basket"];
 
   studentList: any[] = [];
 
@@ -52,5 +52,9 @@ export class AppComponent {
     this.studentList.push(newStudent);
     this.studentName = "";
     this.txtName.nativeElement.focus();
+  }
+
+  onDeleteStudent(index: number) {
+    this.studentList.splice(index, 1);
   }
 }

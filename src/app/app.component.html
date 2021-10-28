@@ -66,6 +66,7 @@
   <div class="student" *ngFor="let item of studentList; let i = index">
     <span>{{ i + 1 }} => </span>
     <app-student [student]="item"></app-student>
+    <button class="delete" (click)="onDeleteStudent(i)">Delete</button>
   </div>
 
   <svg id="clouds" xmlns="http://www.w3.org/2000/svg" width="2611.084" height="485.677" viewBox="0 0 2611.084 485.677">

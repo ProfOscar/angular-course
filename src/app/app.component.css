@@ -19,6 +19,13 @@ button {
     color: whitesmoke;
 }
 
+button.delete{
+    background-color: lightcoral;
+    margin-left: 12px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
 button:disabled {
     background-color: whitesmoke;
     color: gray;
