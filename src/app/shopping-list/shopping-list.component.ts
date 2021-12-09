@@ -15,7 +15,28 @@ export class ShoppingListComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { }
+
+  onIngredientAdded(newIngredient: IngredientModel) {
+    let ingredientFound = false;
+    // for (let item of this.ingredients) {
+    //   if (item.name.toLowerCase() == newIngredient.name.toLowerCase()) {
+    //     ingredientFound = true;
+    //     item.amount += newIngredient.amount;
+    //     break;
+    //   }
+    // }
+    let index: number = 0;
+    while (index < this.ingredients.length && !ingredientFound) {
+      let item: IngredientModel = this.ingredients[index++];
+      if (item.name.toLowerCase() == newIngredient.name.toLowerCase()) {
+        ingredientFound = true;
+        item.amount += newIngredient.amount;
+      }
+    }
+    if (!ingredientFound) {
+      this.ingredients.push(newIngredient);
+    }
   }
 
 }
