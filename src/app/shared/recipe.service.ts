@@ -17,7 +17,7 @@ export class RecipeService {
       data => {
         // console.log(data);
         this.recipes = data as RecipeModel[];
-        this.selectedRecipe = this.recipes[0];
+        // this.selectedRecipe = this.recipes[0];
       },
       error => {
         console.error(error);
