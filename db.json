@@ -4,7 +4,21 @@
       "id": 1,
       "name": "Spaghetti al mandolino",
       "description": "Un particolare tipo di pasta che ...",
-      "imagePath": "https://images.lacucinaitaliana.it/wp-content/uploads/2020/06/03204258/Pasta-alla-chitarra-con-ragu-di-polo.jpg"
+      "imagePath": "https://images.lacucinaitaliana.it/wp-content/uploads/2020/06/03204258/Pasta-alla-chitarra-con-ragu-di-polo.jpg",
+      "ingredients": [
+        {
+          "name": "Farina",
+          "amount": 100
+        },
+        {
+          "name": "Acqua",
+          "amount": 500
+        },
+        {
+          "name": "Sale",
+          "amount": 10
+        }
+      ]
     },
     {
       "id": 2,
@@ -38,8 +52,28 @@
     },
     {
       "name": "Fish",
-      "amount": 4,
+      "amount": 6,
       "id": 3
+    },
+    {
+      "name": "Patate",
+      "amount": 2,
+      "id": 4
+    },
+    {
+      "name": "Farina",
+      "amount": 200,
+      "id": 5
+    },
+    {
+      "name": "Acqua",
+      "amount": 1000,
+      "id": 6
+    },
+    {
+      "name": "Sale",
+      "amount": 20,
+      "id": 7
     }
   ]
 }

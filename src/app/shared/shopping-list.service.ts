@@ -38,7 +38,10 @@ export class ShoppingListService {
   }
 
   addIngredients(ingredients: IngredientModel[]) {
-    this.ingredients.push(...ingredients);
+    //  this.ingredients.push(...ingredients);
+    for (const ingredient of ingredients) {
+      this.addIngredient(ingredient);
+    }
   }
 
   postIngredient = (ingredient: IngredientModel) => {
@@ -47,6 +50,7 @@ export class ShoppingListService {
       .subscribe(
         (succ) => {
           console.log(succ);
+          this.getIngredients();
         },
         (err) => {
           console.error(err);
