@@ -62,17 +62,17 @@
     },
     {
       "name": "Farina",
-      "amount": 200,
+      "amount": 300,
       "id": 5
     },
     {
       "name": "Acqua",
-      "amount": 1000,
+      "amount": 1500,
       "id": 6
     },
     {
       "name": "Sale",
-      "amount": 20,
+      "amount": 30,
       "id": 7
     }
   ]
