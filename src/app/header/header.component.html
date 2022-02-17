@@ -12,7 +12,8 @@
                                         (window:resize)="collapsed = true">
             <ul class="nav navbar-nav">
                 <li routerLinkActive="active"><a [routerLink]="['/recipes']">Recipes</a></li>
-                <li routerLinkActive="active"><a [routerLink]="['/shopping-list']">Shopping List</a></li>
+                <li routerLinkActive="active"><a (click)="show('shopping-list')">Shopping List</a></li>
+                <!-- Vengono qui usate le due alternative per la navigazione tramite router -->
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown" appDropdown>
