@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { RecipeService } from 'src/app/shared/recipe.service';
 import { ShoppingListService } from 'src/app/shared/shopping-list.service';
 import { ActivatedRoute, Params, Router } from '@angular/router';
+import { NgxBootstrapConfirmService } from 'ngx-bootstrap-confirm';
 
 @Component({
   selector: 'app-recipe-detail',
@@ -14,7 +15,8 @@ export class RecipeDetailComponent implements OnInit {
     public recipeService: RecipeService,
     private shoppingList: ShoppingListService,
     private activatedRoute: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private ngxBootstrapConfirmService: NgxBootstrapConfirmService
   ) { }
 
   ngOnInit(): void {
@@ -39,7 +41,22 @@ export class RecipeDetailComponent implements OnInit {
   }
 
   onDeleteRecipe() {
-    this.recipeService.deleteRecipe(this.recipeService.selectedRecipe.id);
+    // if (confirm("Are you sure to delete recipe " + this.recipeService.selectedRecipe.name)) {
+    //   this.recipeService.deleteRecipe(this.recipeService.selectedRecipe.id);
+    // }
+    let options = {
+      title: 'Are you sure you want to delete this recipe?',
+      confirmLabel: 'Okay',
+      declineLabel: 'Cancel'
+    }
+    this.ngxBootstrapConfirmService.confirm(options).then((res: boolean) => {
+      if (res) {
+        // console.log('Okay');
+        this.recipeService.deleteRecipe(this.recipeService.selectedRecipe.id);
+      } else {
+        console.log('Cancel');
+      }
+    });
   }
 
 }

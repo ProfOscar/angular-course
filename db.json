@@ -36,10 +36,19 @@
     },
     {
       "id": 4,
-      "name": "Tiramisu",
-      "description": "Classico dolce italiano con panna e mascarpone ...",
+      "name": "Tiramisù",
+      "description": "Classico dolce italiano con panna e mascarpone immancabile nelle feste...",
       "imagePath": "https://toscanedigusto.com/wp-content/uploads/2019/09/maxresdefault.jpg",
-      "ingredients": []
+      "ingredients": [
+        {
+          "name": "Mascarpone",
+          "amount": 10
+        },
+        {
+          "name": "Cioccolato",
+          "amount": 5
+        }
+      ]
     }
   ],
   "shopping-list": [
